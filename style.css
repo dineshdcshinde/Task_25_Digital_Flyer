@@ -8,6 +8,7 @@ html,
 body {
   height: 100%;
   width: 100%;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .wrapper {
@@ -17,61 +18,225 @@ body {
 
 .flyer {
   display: flex;
-  gap: 1%;
+  height:40%;
   width: 100%;
+  /* background-color: red; */
   max-width: 80%;
   margin: 0 auto;
   margin-top: 3%;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  /* border: 2px solid black; */
+/* padding-bottom: 2%; */
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
 }
 
 .flyer .flyer-left {
-    height: 40%;
+  height: 50%;
   width: 50%;
   background: linear-gradient(180deg, #45b99c, #2b4b47);
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
+  position: relative;
 }
 
-.flyer-left nav{
-    height: 5%;
-    align-self: flex-start;
+.flyer-left nav {
+  height: 5%;
+  align-self: flex-start;
+  position: relative;
 }
 
 .flyer-left nav img {
-  height: 180px;
+  height: 60px;
+  width: 100px;
+  position: absolute;
+  z-index: 111;
+  top: 3%;
+  /* background-color: #fff; */
+  margin-left: 2%;
 }
 
 .flyer-left img {
-  height: 400px;
+  margin-top: 5%;
+  height: 410px;
   object-fit: cover;
   object-position: center;
+  align-self: center;
 }
 
-
-.flyer-right{
+.flyer-right {
   height: 40%;
   width: 50%;
+  padding-left: 2%;
   /* background-color: red; */
 }
 
-.flyer-right nav{
+.flyer-right nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.flyer-right nav .social{
- padding-right: 2rem;
- 
+.flyer-right nav .social {
+  padding-right: 2rem;
 }
 
-.social i{
+.social i {
   font-size: 1.3rem;
+  padding: 0.3rem;
+  transition: color 0.3s ease, background-color 0.3s ease, transform 0.3s ease;
 }
 
-.flyer-right img{
+.social i:hover {
+  color: #fff;
+  background: linear-gradient(180deg, #45b99c, #2b4b47);
+  transform: scale(1.03);
+  cursor: pointer;
+}
+
+.flyer-right img {
   height: 50px;
   width: 100px;
+  border-radius: 1.5rem;
+}
+
+.flyer-right .info {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  padding-right: 2%;
+  /* background-color: red; */
+}
+
+.info h1 {
+  font-size: 3.3rem;
+  font-weight: 500;
+  background: linear-gradient(180deg, #45b99c, #2b4b47);
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 1%;
+  /* display: block; */
+}
+
+.info h1 strong {
+  background: linear-gradient(180deg, #45b99c, #2b4b47);
+
+  /* -webkit-background-clip: text; */
+  -webkit-text-fill-color: transparent;
+  background-clip: text; /* For non-webkit browsers */
+}
+
+.info .fill {
+  margin-bottom: 2%;
+  font-size: 3.5rem;
+  font-weight: 500;
+  color: #fff;
+  background: linear-gradient(180deg, #45b99c, #2b4b47);
+  letter-spacing: 5px;
+  /* -webkit-text-stroke: 2px white; */
+}
+
+.manage-para {
+  width: 100%;
+  max-width: 55%;
+  font-size: 1.2rem;
+  line-height: 1.3rem;
+  margin-bottom: 5%;
+  text-align: center;
+  margin-top: 2%;
+}
+
+.info button {
+  text-transform: uppercase;
+  margin-right: 3%;
+  padding: 10px 30px;
+  outline: none;
+  border: none;
+  background-color: transparent;
+  border: 2px solid #2b4b47;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: #005540;
+  border-radius: 10px;
+  transition: background 0.4s ease, color 0.4s ease;
+}
+
+.info button:hover {
+  cursor: pointer;
+  background: linear-gradient(180deg, #45b99c, #2b4b47);
+color: #fff;
+}
+
+.sign-wrapper {
+  /* margin-top: 0; */
+  height: 15vh;
+  width: 90%;
+  margin-left: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 3px solid #ddd;
+  border-top-right-radius: 1.5rem;
+  border-bottom-right-radius: 1.5rem;
+  background: linear-gradient(180deg, #45b99c, #2b4b47);
+}
+
+.sign-wrapper img {
+  height:60px;
+  width: 100%;
+  align-self: center;
+}
+
+.sign-wrapper p {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #fff;
+  padding: 3%;
+  text-align: center;
+  align-self: center;
+}
+
+.contact-sec{
+  width: 50%;
+  display: flex;
+  gap: 1%;
+  margin-top: 3rem;
+  margin-left: 2%;
+}
+
+.contact-sec i{
+  padding: 2%;
+  font-size: 2rem;
+  color: #fff;
+}
+
+.contact-sec p{
+  font-size: 1.2rem;
+  color: #fff;
+}
+
+
+.conta-right{
+  margin-top: 7rem;
+  display: flex;
+  /* flex-direction: column; */
+  justify-content: flex-end;
+  gap: 2%;
+  align-items: center;
+  padding-right: 4%;
+}
+
+.conta-right i{
+  font-size: 2rem;
+  color: #307e75;
+}
+
+.conta-right p{
+  color: #307e75;
+  font-size: 1rem;
 }
