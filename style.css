@@ -46,6 +46,7 @@ body {
   height: 5%;
   align-self: flex-start;
   position: relative;
+  padding-top: 2%;
 }
 
 .flyer-left nav img {
@@ -77,6 +78,8 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding-top: 2%;
+
 }
 
 .flyer-right nav .social {
